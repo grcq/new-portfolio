@@ -1,0 +1,14 @@
+---
+interface Props {
+    href: string;
+    icon?: string;
+}
+
+const { href, icon }: Props = Astro.props;
+---
+<li class="navbar-item">
+    <a href={href} class="navbar-link">
+        {icon && <i class={"fas fa-" + icon}></i>} 
+        <slot />
+    </a>
+</li>
